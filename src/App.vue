@@ -11,8 +11,8 @@ import Skills from './components/skill/Skills.vue'
   <Navbar />
   <Banner />
   <Experience />
-  <About />
   <Skills />
+  <About />
   <Footer />
 </template>
 
