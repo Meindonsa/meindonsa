@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { data } from '@/components/skill/skills.ts'
+import { computed, ref } from 'vue'
+import { data, filtersData } from '@/components/skill/skills.ts'
 import SkillItem from '@/components/skill/SkillItem.vue'
 
 const skills = ref(data)
+const filter = ref('all')
+const filters = ref(filtersData)
 
-const color = (data: string | undefined) => {
-  if (data == undefined || data.trim() == '') return ''
-  return `text-[${data.toUpperCase()}]`
+const filtered = computed(() => {
+  if (filter.value == 'all') return skills.value
+  return skills.value.filter((e) => e.category.name == filter.value)
+})
+const isActive = (name: string) => {
+  return filter.value == name ? 'bg-indigo-600' : 'border border-indigo-600'
+}
+
+const onFilter = (name: string) => {
+  filter.value = name
 }
 </script>
 
@@ -16,16 +25,36 @@ const color = (data: string | undefined) => {
     id="skills"
     class="w-full min-h-screen overflow-hidden bg-gray-800 px-20 py-24 sm:py-32 lg:overflow-visible"
   >
-    <h1 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mb-7">
-      SKILLS
-    </h1>
-    <div class="w-full grid grid-cols-3 gap-4">
-      <TransitionGroup name="list">
-        <SkillItem v-for="skill in skills" :key="skill.id" :data="skill" />
+    <div class="flex items-center mb-15">
+      <h1 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mr-3">
+        SKILLS
+      </h1>
+      <div class="md:block hidden">
+        <a
+          v-for="item of filters"
+          class="py-3 px-5 cursor-pointer mr-2 rounded-md text-white ease-in-out"
+          @click="onFilter(item.name)"
+          :class="isActive(item.name)"
+        >
+          {{ item.label }}
+        </a>
+      </div>
+    </div>
+    <div class="w-full grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-3 gap-4 mb-30">
+      <TransitionGroup name="list" mode="in-out">
+        <SkillItem v-for="skill in filtered" :key="skill.id" :data="skill" />
       </TransitionGroup>
+    </div>
+    <div class="flex justify-center items-center text-center">
+      <div class="border-t-3 border-t-gray-300">
+        <h4 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300">
+          Des outils maitrisés afin de répondre à vos besoins
+        </h4>
+      </div>
     </div>
   </section>
 </template>
+
 <style scoped>
 .list-enter-active,
 .list-leave-active {
