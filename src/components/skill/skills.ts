@@ -150,7 +150,8 @@ export const data: Skill[] = [
 export type Filter = {
   id: number,
   label: string,
-  name: string
+  name: string,
+  icon?: string
 }
 
 export const filtersData: Filter[] = [
