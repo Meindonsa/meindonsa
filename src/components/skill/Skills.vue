@@ -60,6 +60,7 @@ const onFilter = (name: string) => {
 .list-leave-active {
   transition: all 1s ease-in-out;
 }
+
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
