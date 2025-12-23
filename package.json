@@ -15,7 +15,6 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@meindonsa/space-icons": "^0.0.7",
     "@tailwindcss/vite": "^4.1.17",
     "boxicons": "^2.1.4",
     "tailwindcss": "^4.1.17",
