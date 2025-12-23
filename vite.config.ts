@@ -9,25 +9,9 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          // On dit à Vue de considérer toutes les balises commençant par 'si-'
-          // comme des Custom Elements natifs
-          isCustomElement: (tag) => tag.startsWith('si-'),
-        },
-      },
-    }),
+    vue(),
     tailwindcss(),
-    vueDevTools(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'node_modules/@meindonsa/space-icons/dist/space-icons.svg',
-          dest: './',
-        },
-      ],
-    }),
+    vueDevTools()
   ],
   resolve: {
     alias: {
