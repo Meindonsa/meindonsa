@@ -17,7 +17,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#42b883',
     icon: 'images/Vue.png',
-    show: false
+    show: false,
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#dd0031',
     icon: 'images/angular.png',
-    show: false
+    show: false,
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#38bdf8',
     icon: 'images/tailwind.png',
-    show: false
+    show: false,
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#7952b3',
     icon: 'images/bootstrap.png',
-    show: false
+    show: false,
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#f7df1e',
     icon: 'images/javascript.png',
-    show: false
+    show: false,
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#e34f26',
     icon: 'images/html.png',
-    show: false
+    show: false,
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#1572b6',
     icon: 'images/css.png',
-    show: false
+    show: false,
   },
   {
     id: 8,
@@ -80,7 +80,7 @@ export const data: Skill[] = [
     description: lorem,
     color: '#3880ff',
     icon: 'images/ionic.png',
-    show: false
+    show: false,
   },
   {
     id: 9,
@@ -89,52 +89,52 @@ export const data: Skill[] = [
     description: lorem,
     color: '#6db33f',
     icon: 'images/spring-boot.png',
-    show: false
+    show: false,
   },
   {
     id: 10,
     name: 'Java',
     category: { label: 'Back-end', name: 'back' },
     description: lorem,
-    color: '#007396',
-    icon: 'images/java.svg',
-    show: false
+    color: '#73A1F8',
+    icon: 'images/java.png',
+    show: false,
   },
   {
     id: 11,
     name: 'Git',
-     category: { label: 'Outils', name: 'tools' },
+    category: { label: 'Outils', name: 'tools' },
     description: lorem,
     color: '#f05032',
     icon: 'images/git.png',
-    show: false
+    show: false,
   },
   {
     id: 12,
     name: 'GitHub',
-     category: { label: 'Outils', name: 'tools' },
+    category: { label: 'Outils', name: 'tools' },
     description: lorem,
-    color: '#181717',
+    color: '#000',
     icon: 'images/github.png',
-    show: false
+    show: false,
   },
   {
     id: 13,
     name: 'Bitbucket',
-     category: { label: 'Outils', name: 'tools' },
+    category: { label: 'Outils', name: 'tools' },
     description: lorem,
     color: '#0052cc',
     icon: 'images/bitbucket.png',
-    show: false
+    show: false,
   },
   {
     id: 14,
     name: 'Jira',
-     category: { label: 'Outils', name: 'tools' },
+    category: { label: 'Outils', name: 'tools' },
     description: lorem,
     color: '#0052cc',
     icon: 'images/jira.png',
-    show: false
+    show: false,
   },
   {
     id: 15,
@@ -143,9 +143,9 @@ export const data: Skill[] = [
     description: lorem,
     color: '#47848f',
     icon: 'images/electron.png',
-    show: false
+    show: false,
   },
-];
+]
 
 export type Filter = {
   id: number,
