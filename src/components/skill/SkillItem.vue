@@ -25,26 +25,14 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="border border-gray-700 py-5 px-3 rounded-sm bg-center bg-no-repeat bg-cover cursor-pointer"
-    :style="[
-      show
-        ? {
-            backgroundImage: `linear-gradient(rgba(31, 41, 55, 0.9), rgba(31, 41, 55, 0.9)), url(${data.icon})`,
-          }
-        : {},
-    ]"
-    @mouseenter="isMobile ? null : (show = true)"
-    @mouseleave="isMobile ? null : (show = false)"
+    class="border border-gray-700 py-5 px-3 rounded-sm cursor-pointer"
   >
-    <h1 @click="toggle" class="text-2xl font-semibold" :style="{ color: data.color }">
-      {{ data.name }}
-    </h1>
-    <Transition mode="in-out">
-      <div v-show="show">
-        <h2 class="text-gray-50">{{ data.category.label }}</h2>
-        <p class="text-gray-500">{{ data.description }}</p>
-      </div>
-    </Transition>
+    <div class="flex items-center gap-1 w-full">
+      <img :src="data.icon" class="w-10" :alt="data.name" />
+      <h1 @click="toggle" class="text-2xl font-semibold" :style="{ color: data.color }">
+        {{ data.name }}
+      </h1>
+    </div>
   </div>
 </template>
 

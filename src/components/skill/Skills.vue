@@ -41,16 +41,9 @@ const onFilter = (name: string) => {
       </div>
     </div>
     <div class="w-full grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-3 gap-4 mb-30">
-      <TransitionGroup name="list" mode="in-out">
+      <TransitionGroup name="list" >
         <SkillItem v-for="skill in filtered" :key="skill.id" :data="skill" />
       </TransitionGroup>
-    </div>
-    <div class="flex justify-center items-center text-center">
-      <div class="border-t-3 border-t-gray-300">
-        <h4 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300">
-          Des outils maitrisés afin de répondre à vos besoins
-        </h4>
-      </div>
     </div>
   </section>
 </template>
@@ -58,7 +51,7 @@ const onFilter = (name: string) => {
 <style scoped>
 .list-enter-active,
 .list-leave-active {
-  transition: all 1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .list-enter-from,
