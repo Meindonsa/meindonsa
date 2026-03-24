@@ -1,0 +1,51 @@
+export interface Service {
+  n?: string
+  icon?: string
+  title: string
+  description: string
+}
+
+export const Services: Service[] = [
+  {
+    n: '01',
+    icon: '⚡',
+    title: 'Applications Web Fullstack',
+    description:
+      "SPA, SSR, APIs REST & GraphQL. De la base de données au frontend, je conçois et code l'ensemble de l'architecture.",
+  },
+  {
+    n: '02',
+    icon: '📱',
+    title: 'Applications Mobiles',
+    description:
+      'Apps cross-platform iOS & Android avec Flutter. UX native, performances optimisées, publication sur les stores.',
+  },
+  {
+    n: '03',
+    icon: '🔌',
+    title: 'APIs & Microservices',
+    description:
+      "Conception et développement d'APIs robustes, documentées et sécurisées. Authentification JWT/OAuth, rate limiting, webhooks.",
+  },
+  {
+    n: '04',
+    icon: '🎨',
+    title: 'Interfaces & Design System',
+    description:
+      'Intégration Figma pixel-perfect, bibliothèques de composants, animations soignées. Accessibilité et performance comme standards.',
+  },
+  {
+    n: '05',
+    icon: '🚀',
+    title: 'DevOps & CI/CD',
+    description:
+      'Containerisation Docker, pipelines GitHub Actions, déploiements automatisés. Infrastructure fiable pour des livraisons sans stress.',
+  },
+  {
+    n: '06',
+    icon: '🔍',
+    title: 'Audit & Optimisation',
+    description:
+      'Analyse de code, optimisation des performances (Core Web Vitals, N+1, bundle), sécurité et réduction de la dette technique.',
+  },
+]

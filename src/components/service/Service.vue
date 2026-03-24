@@ -1,24 +1,49 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { type Ref, ref } from 'vue'
+import { type Service, Services } from '@/components/service/Services.ts'
+
+const services: Ref<Service[]> = ref(Services)
+</script>
 
 <template>
-  <section
-    id="skills"
-    class="w-full min-h-screen overflow-hidden bg-gray-800 px-20 py-24 sm:py-32 lg:overflow-visible"
-  >
-    <h1 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mr-3">
-      SERVICE
-    </h1>
-    <div>
-      <div
-        class="bg-neutral-primary-soft block max-w-sm p-6 border border-default rounded-base shadow-xs"
-      >
-        <h5 class="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">
-          Développement web
-        </h5>
-        <p class="text-body mb-6">
-          Here are the biggest technology acquisitions of 2025 so far, in reverse chronological
-          order.
+  <section id="services" class="py-28 bg-ink">
+    <div class="max-w-[1200px] mx-auto px-10">
+      <div class="mb-16">
+        <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3"
+          >04 — Services</span
+        >
+        <h2
+          class="font-serif font-bold text-ivory leading-[1.05] tracking-[-0.03em]"
+          style="font-size: clamp(2.2rem, 5vw, 3.8rem)"
+        >
+          Ce que je <em class="text-gold">construis</em>
+        </h2>
+        <p class="mt-4 text-muted text-[.95rem] leading-relaxed max-w-md">
+          De la conception à la mise en production, je prends en charge l'intégralité du cycle.
         </p>
+      </div>
+
+      <!-- Grid 3×2 séparé par 1px -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-lg overflow-hidden"
+      >
+        <div
+          v-for="srv in services"
+          :key="srv.title"
+          class="bg-ink p-10 relative group transition-colors duration-300 hover:bg-ink2 reveal"
+          data-hover
+        >
+          <!-- top accent line -->
+          <div
+            class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+          <div class="font-mono text-[.65rem] tracking-[.15em] text-gold/60 mb-5">
+            {{ srv.n }}
+          </div>
+          <div class="text-2xl mb-4">{{ srv.icon }}</div>
+          <h3 class="text-[1.05rem] font-semibold text-ivory mb-3">{{ srv.title }}</h3>
+          <p class="text-[.85rem] text-muted leading-[1.7]">{{ srv.description }}</p>
+        </div>
       </div>
     </div>
   </section>

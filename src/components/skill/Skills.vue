@@ -1,49 +1,76 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { data, filtersData } from '@/components/skill/skills.ts'
-import SkillItem from '@/components/skill/SkillItem.vue'
+import { ref } from 'vue'
+import { data, marItemsData } from '@/components/skill/skills.ts'
 
 const skills = ref(data)
-const filter = ref('all')
-const filters = ref(filtersData)
-
-const filtered = computed(() => {
-  if (filter.value == 'all') return skills.value
-  return skills.value.filter((e) => e.category.name == filter.value)
-})
-const isActive = (name: string) => {
-  return filter.value == name ? 'bg-indigo-600' : 'border border-indigo-600'
-}
-
-const onFilter = (name: string) => {
-  filter.value = name
-}
+const marItems = ref(marItemsData)
 </script>
 
 <template>
-  <section
-    id="skills"
-    class="w-full min-h-screen overflow-hidden bg-gray-800 px-20 py-24 sm:py-32 lg:overflow-visible"
-  >
-    <div class="flex items-center mb-15">
-      <h1 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mr-3">
-        SKILLS
-      </h1>
-      <div class="md:block hidden">
-        <a
-          v-for="item of filters"
-          class="py-3 px-5 cursor-pointer mr-2 rounded-md text-white ease-in-out"
-          @click="onFilter(item.name)"
-          :class="isActive(item.name)"
-        >
-          {{ item.label }}
-        </a>
+  <section id="skills" class="py-28 bg-ink2">
+    <div class="max-w-[1200px] mx-auto px-10">
+      <!-- Top grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 mb-16">
+        <!-- Intro -->
+        <div class="reveal-l">
+          <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3"
+            >03 — Stack</span
+          >
+          <h2
+            class="font-serif font-bold text-ivory leading-[1.05] tracking-[-0.03em] mb-5"
+            style="font-size: clamp(1.8rem, 3.5vw, 2.8rem)"
+          >
+            Mes outils, <em class="text-gold">mes armes.</em>
+          </h2>
+          <p class="text-[.9rem] text-muted leading-[1.8]">
+            Cinq ans à utiliser, tester et affiner ma stack. Aussi à l'aise côté backend que
+            frontend. Je sais quand utiliser quoi.
+          </p>
+        </div>
+
+        <!-- Groups 2x2 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 reveal">
+          <div v-for="g in skills" :key="g.title">
+            <div
+              class="flex items-center gap-3 font-mono text-[.68rem] tracking-[.18em] uppercase text-gold mb-5"
+            >
+              <span class="block w-6 h-px bg-gold"></span>
+              {{ g.title }}
+            </div>
+            <div class="flex flex-col gap-1">
+              <div
+                v-for="sk in g.items"
+                :key="sk.name"
+                class="flex justify-between items-center px-4 py-3 border border-transparent rounded transition-all duration-200 hover:bg-gold-dim hover:border-gold-line"
+                data-hover
+              >
+                <span class="text-[.9rem] text-paper2">{{ sk.name }}</span>
+                <span
+                  class="font-mono text-[.65rem] tracking-[.08em] text-muted2 transition-colors group-hover:text-gold"
+                >
+                  {{ sk.level }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="w-full grid grid-cols-2 lg:grid-cols-4 sm:grid-cols-3 gap-4 mb-30">
-      <TransitionGroup name="list" >
-        <SkillItem v-for="skill in filtered" :key="skill.id" :data="skill" />
-      </TransitionGroup>
+
+      <!-- Marquee -->
+      <div class="overflow-hidden border-t border-rule pt-10">
+        <div class="marquee-track flex gap-10 items-center w-max">
+          <template v-for="_ in 2" :key="_">
+            <template v-for="(item, i) in marItems" :key="`${_}-${i}`">
+              <span
+                class="font-mono text-[.75rem] tracking-widest text-muted2 whitespace-nowrap transition-colors duration-200 hover:text-gold"
+              >
+                {{ item }}
+              </span>
+              <span class="text-rule text-sm">·</span>
+            </template>
+          </template>
+        </div>
+      </div>
     </div>
   </section>
 </template>

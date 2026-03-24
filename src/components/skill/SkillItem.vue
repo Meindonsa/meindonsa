@@ -24,9 +24,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="border border-gray-700 py-5 px-3 rounded-sm cursor-pointer"
-  >
+  <div class="border border-gray-700 py-5 px-3 rounded-sm cursor-pointer">
     <div class="flex items-center gap-1 w-full">
       <img :src="data.icon" class="w-10" :alt="data.name" />
       <h1 @click="toggle" class="text-2xl font-semibold" :style="{ color: data.color }">
