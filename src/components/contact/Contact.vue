@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const networks = [
+const socialNetworks = [
   {
     label: 'e.borisaxel@gmail.com',
     href: 'mailto:borisaxel@gmail.com',
@@ -80,7 +80,7 @@ const networks = [
       <!-- Networks -->
       <div class="flex flex-wrap justify-center gap-3">
         <a
-          v-for="n in networks"
+          v-for="n in socialNetworks"
           :key="n.label"
           :href="n.href"
           target="_blank"
