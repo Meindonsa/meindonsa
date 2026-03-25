@@ -8,6 +8,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'JetBrainsMono Nerd Font';
   src: url('/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Medium.ttf') format('truetype');
@@ -15,6 +16,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'JetBrainsMono Nerd Font';
   src: url('/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Bold.ttf') format('truetype');
@@ -22,6 +24,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'JetBrainsMono Nerd Font';
   src: url('/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Italic.ttf') format('truetype');
@@ -31,92 +34,195 @@
 }
 
 @theme {
-  --color-ink:         #010d14;   /* fond principal */
-  --color-ink2:        #021626;   /* fond alterné */
-  --color-ink3:        #023859;   /* surface cards */
-  --color-paper:       #c8dce8;   /* texte principal */
-  --color-paper2:      #a0bece;   /* texte secondaire */
-  --color-ivory:       #e8f4fc;   /* texte fort / titres */
-  --color-accent:      #4db8ff;   /* bleu électrique — remplace l'or */
-  --color-accent-dim:  rgba(77,184,255,0.10);
-  --color-accent-line: rgba(77,184,255,0.25);
-  --color-cyan:        #00d4ff;   /* accent secondaire froid */
-  --color-muted:       #4a7a96;   /* texte atténué */
-  --color-muted2:      #2a5470;   /* texte très atténué */
-  --color-rule:        rgba(77,184,255,0.08);  /* bordures subtiles */
-  --color-ok:          #3dd68c;   /* vert disponibilité */
-
-  --font-sans:  'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
-  --font-mono:  'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
+  --color-ink: #010d14; /* fond principal */
+  --color-ink2: #021626; /* fond alterné */
+  --color-ink3: #023859; /* surface cards */
+  --color-paper: #c8dce8; /* texte principal */
+  --color-paper2: #a0bece; /* texte secondaire */
+  --color-ivory: #e8f4fc; /* texte fort / titres */
+  --color-accent: #4db8ff; /* bleu électrique — remplace l'or */
+  --color-accent-dim: rgba(77, 184, 255, 0.1);
+  --color-accent-line: rgba(77, 184, 255, 0.25);
+  --color-cyan: #00d4ff; /* accent secondaire froid */
+  --color-muted: #4a7a96; /* texte atténué */
+  --color-muted2: #2a5470; /* texte très atténué */
+  --color-rule: rgba(77, 184, 255, 0.08); /* bordures subtiles */
+  --color-ok: #3dd68c; /* vert disponibilité */
+  --font-sans: 'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
+  --font-mono: 'JetBrainsMono Nerd Font', 'JetBrains Mono', 'Cascadia Code', monospace;
 
   --text-hero: clamp(4rem, 10vw, 9.5rem);
-  --text-sec:  clamp(2.2rem, 5vw, 3.8rem);
+  --text-sec: clamp(2.2rem, 5vw, 3.8rem);
 }
 
-/* ── Reset de base ──────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { -webkit-font-smoothing: antialiased; }
-::selection { background: var(--color-accent); color: var(--color-ink); }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
 
 /* ── Scrollbar ──────────────────────────────────────────────── */
-::-webkit-scrollbar       { width: 3px; }
-::-webkit-scrollbar-track { background: var(--color-ink); }
-::-webkit-scrollbar-thumb { background: var(--color-accent); }
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+}
 
 /* ── Cursor ─────────────────────────────────────────────────── */
-* { cursor: none !important; }
+* {
+  cursor: none !important;
+}
+
 #c-dot {
-  position: fixed; width: 8px; height: 8px;
-  background: var(--color-accent); border-radius: 9999px;
-  pointer-events: none; z-index: 9999;
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width .2s, height .2s;
+  transition:
+    width 0.2s,
+    height 0.2s;
 }
+
 #c-ring {
-  position: fixed; width: 34px; height: 34px;
-  border: 1px solid rgba(77,184,255,.35); border-radius: 9999px;
-  pointer-events: none; z-index: 9998;
+  position: fixed;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(77, 184, 255, 0.35);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9998;
   transform: translate(-50%, -50%);
-  transition: width .3s, height .3s, border-color .3s;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    border-color 0.3s;
 }
-.cursor-expand #c-ring { width: 54px; height: 54px; border-color: var(--color-accent); }
-.cursor-expand #c-dot  { width: 4px; height: 4px; }
+
+.cursor-expand #c-ring {
+  width: 54px;
+  height: 54px;
+  border-color: var(--color-accent);
+}
+
+.cursor-expand #c-dot {
+  width: 4px;
+  height: 4px;
+}
 
 /* ── Grain overlay ──────────────────────────────────────────── */
 body::after {
-  content: ''; position: fixed; inset: 0; z-index: 9990;
-  pointer-events: none; opacity: .03;
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
   background-size: 180px;
 }
 
 /* ── Reveal animations ──────────────────────────────────────── */
 .reveal {
-  opacity: 0; transform: translateY(28px);
-  transition: opacity .7s cubic-bezier(.4,0,.2,1),
-  transform .7s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.reveal.in { opacity: 1; transform: translateY(0); }
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .reveal-l {
-  opacity: 0; transform: translateX(-22px);
-  transition: opacity .7s cubic-bezier(.4,0,.2,1),
-  transform .7s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+  transform: translateX(-22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.reveal-l.in { opacity: 1; transform: translateX(0); }
+
+.reveal-l.in {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* ── Marquee ────────────────────────────────────────────────── */
-@keyframes mar { to { transform: translateX(-50%); } }
-.marquee-track { animation: mar 26s linear infinite; }
-.marquee-track:hover { animation-play-state: paused; }
+@keyframes mar {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: mar 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
 
 /* ── Blink ──────────────────────────────────────────────────── */
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
-.blink { animation: blink 2s ease infinite; }
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.blink {
+  animation: blink 2s ease infinite;
+}
 
 /* ── Bob (scroll arrow) ─────────────────────────────────────── */
-@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
-.bob { animation: bob 2s ease infinite; }
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.bob {
+  animation: bob 2s ease infinite;
+}
 
 /* ── Float (hero chips) ─────────────────────────────────────── */
-@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
