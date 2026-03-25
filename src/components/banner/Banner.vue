@@ -3,9 +3,9 @@ import { ref, type Ref } from 'vue'
 import { badgeData, dataStats, type State } from '@/components/banner/BannerData.ts'
 import { type SocialNetwork, socialNetworks } from '@/shared/SocialNetwork.ts'
 
-const stats: Ref<State[]> = ref(dataStats);
-const badges: Ref<string[]> = ref(badgeData);
-const socials: Ref<SocialNetwork[]> = ref(socialNetworks);
+const stats: Ref<State[]> = ref(dataStats)
+const badges: Ref<string[]> = ref(badgeData)
+const socials: Ref<SocialNetwork[]> = ref(socialNetworks)
 </script>
 
 <template>
