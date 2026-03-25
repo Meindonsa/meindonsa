@@ -1,31 +1,31 @@
 <script setup lang="ts">
 const details = [
   { k: 'Localisation', v: 'Libreville, Gabon 🇬🇦 · Remote OK' },
-  { k: 'Formation', v: 'Ingénierie Informatique' },
-  { k: 'Spécialité', v: 'Développement Fullstack Web & Mobile' },
+  { k: 'Formation', v: 'Ingénierie Logiciel' },
+  { k: 'Spécialité', v: 'Développement Fullstack Web, Mobile & Desktop' },
   { k: 'Langues', v: 'Français · Anglais' },
-  { k: 'Disponibilité', v: '✓ Disponible — Freelance & CDI', ok: true },
+  { k: 'Disponibilité', v: '✓ Disponible — Freelance', ok: true },
 ]
 const cards = [
   {
     icon: '⚡',
     title: 'Développement Backend',
-    body: "APIs robustes, bases de données bien conçues, logique métier solide. Node.js, Laravel, Python — je choisis l'outil adapté.",
+    body: "APIs robustes, bases de données bien conçues, logique métier solide avec Spring Boot. J'ai l'outil adapté.",
   },
   {
     icon: '🎨',
     title: 'Développement Frontend',
-    body: "Interfaces réactives, accessibles et performantes. Vue 3, React, animations soignées. Autant d'attention au pixel qu'à l'algorithme.",
+    body: "Interfaces réactives, accessibles et performantes. Vue 3, Angular, animations soignées. Autant d'attention au pixel qu'à l'algorithme.",
   },
   {
     icon: '📱',
     title: 'Mobile & Cross-platform',
-    body: "Applications iOS & Android avec Flutter. Une codebase, deux plateformes, zéro compromis sur l'expérience.",
+    body: "Applications iOS & Android avec IONIC. Une codebase, deux plateformes, zéro compromis sur l'expérience.",
   },
   {
-    icon: '🚀',
-    title: 'DevOps & Déploiement',
-    body: 'CI/CD, Docker, déploiement sur VPS, Vercel, Railway. Du code qui tourne en production, pas seulement en local.',
+    icon: '🖥',
+    title: 'Desktop & Cross-platform',
+    body: 'Applications pour vos bureaux : Windows, Mac ou Linux. Plusieurs platefomes, une codebase robuste, un outils. ElectronJs.',
   },
 ]
 </script>
@@ -56,15 +56,15 @@ const cards = [
             architectures backend robustes que sur des interfaces frontend soignées.
           </p>
           <p class="text-muted leading-[1.85] mb-5">
-            Mon parcours couvre des projets variés : APIs REST & GraphQL, applications SPA, systèmes
+            Mon parcours couvre des projets variés : APIs REST, applications SPA, systèmes
             d'authentification, intégrations de paiement, dashboards analytiques, applications
-            mobiles Flutter.
+            mobiles IONIC.
           </p>
           <p class="text-muted leading-[1.85]">
             Je crois que le bon code est celui qui
             <strong class="text-paper font-medium">dure et qui scale</strong> — pas seulement celui
-            qui marche le premier jour. Architecture claire, tests, CI/CD : j'aborde chaque projet
-            comme si je devais le maintenir dans 3 ans.
+            qui marche le premier jour. Architecture claire, tests : j'aborde chaque projet comme si
+            je ne devais le maintenir que dans 3 ans.
           </p>
 
           <!-- Detail rows -->
