@@ -9,13 +9,11 @@ const marItems = ref(marItemsData)
 <template>
   <section id="skills" class="py-28 bg-ink2">
     <div class="max-w-[1200px] mx-auto px-10">
-      <!-- Top grid -->
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 mb-16">
-        <!-- Intro -->
         <div class="reveal-l">
-          <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3"
-            >03 — Stack</span
-          >
+          <span class="font-mono text-[.65rem] tracking-[.2em] uppercase text-gold block mb-3">
+            03 — Stack
+          </span>
           <h2
             class="font-serif font-bold text-ivory leading-[1.05] tracking-[-0.03em] mb-5"
             style="font-size: clamp(1.8rem, 3.5vw, 2.8rem)"
@@ -76,14 +74,4 @@ const marItems = ref(marItemsData)
 </template>
 
 <style scoped>
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.2s ease-in-out;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
 </style>

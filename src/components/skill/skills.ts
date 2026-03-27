@@ -1,6 +1,5 @@
 import SkillItem from '@/components/skill/SkillItem.vue'
 
-const lorem: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi.'
 export type Skill = {
   title: string
   items: Array<SkillItem>
@@ -15,60 +14,62 @@ export const data: Skill[] = [
   {
     title: 'Frontend',
     items: [
-      { name: 'Vue 3 / Nuxt 3', level: 'Expert' },
-      { name: 'React / Next.js', level: 'Avancé' },
+      { name: 'Angular', level: 'Avancé' },
+      { name: 'Vue 3', level: 'Avancé' },
       { name: 'TypeScript', level: 'Avancé' },
-      { name: 'Tailwind CSS', level: 'Expert' },
-      { name: 'Flutter (UI)', level: 'Intermédiaire' },
+      { name: 'Tailwind CSS', level: 'Intermédiaire' },
+      { name: 'Bootstrap', level: 'Expert' },
     ],
   },
   {
     title: 'Backend',
     items: [
-      { name: 'Node.js / Express', level: 'Expert' },
-      { name: 'Laravel / PHP', level: 'Avancé' },
-      { name: 'REST API / GraphQL', level: 'Expert' },
+      { name: 'Spring Boot', level: 'Avancé' },
+      { name: 'Hono', level: 'Intermédiaire' },
+      { name: 'REST API', level: 'Expert' },
       { name: 'PostgreSQL / MySQL', level: 'Avancé' },
-      { name: 'Redis', level: 'Intermédiaire' },
     ],
   },
   {
     title: 'Outils & DevOps',
     items: [
-      { name: 'Git / GitHub', level: 'Expert' },
-      { name: 'Docker', level: 'Avancé' },
-      { name: 'CI/CD (GH Actions)', level: 'Avancé' },
-      { name: 'Vercel / Railway', level: 'Avancé' },
+      { name: 'Git / GitHub / BitBucket', level: 'Avancé' },
+      { name: 'Docker', level: 'Intermédiaire' },
       { name: 'Figma', level: 'Intermédiaire' },
+      { name: 'Jenkins', level: 'Intermédiaire' },
     ],
   },
   {
     title: 'Mobile & Autres',
     items: [
-      { name: 'Flutter', level: 'Avancé' },
-      { name: 'React Native', level: 'Intermédiaire' },
-      { name: 'Prisma ORM', level: 'Avancé' },
-      { name: 'Jest / Vitest', level: 'Avancé' },
+      { name: 'IONIC', level: 'Avancé' },
       { name: 'Linux / Bash', level: 'Intermédiaire' },
+      { name: 'Electron JS', level: 'Intermédiaire' },
+      { name: 'Supabase', level: 'Intermédiaire' },
     ],
   },
 ]
 
 export const marItemsData = [
   'Vue 3',
-  'React',
-  'Node.js',
-  'Laravel',
+  'Angular',
   'TypeScript',
-  'PostgreSQL',
-  'Docker',
-  'Flutter',
   'Tailwind CSS',
-  'GraphQL',
+  'Bootstrap',
+  'Spring Boot',
+  'Hono',
   'REST API',
-  'Nuxt 3',
-  'Next.js',
-  'Redis',
-  'GitHub Actions',
-  'Prisma',
+  'MySQL',
+  'Git',
+  'GitHub',
+  'BitBucket',
+  'Docker',
+  'Figma',
+  'Jenkins',
+  'Jira',
+  'Confluence',
+  'IONIC',
+  'Linux',
+  'Electron JS',
+  'Supabase',
 ]
