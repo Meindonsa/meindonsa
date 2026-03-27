@@ -2,7 +2,7 @@
 const socialNetworks = [
   {
     label: 'e.borisaxel@gmail.com',
-    href: 'mailto:borisaxel@gmail.com',
+    href: 'mailto:e.borisaxel@gmail.com',
     icon: `<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>`,
   },
   {
@@ -15,11 +15,6 @@ const socialNetworks = [
     href: 'https://linkedin.com/in/borisaxel',
     icon: `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>`,
   },
-  /*{
-    label: '@meindonsa',
-    href: 'https://twitter.com/meindonsa',
-    icon: `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
-  },*/
   {
     label: 'meindonsa.vercel.app',
     href: 'https://meindonsa.vercel.app',
