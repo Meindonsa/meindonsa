@@ -22,7 +22,7 @@
           GitHub
         </a>
         <a
-          href="mailto:borisaxel@example.com"
+          href="mailto:e.borisaxel@gmail.com"
           class="font-mono text-[.65rem] tracking-widest uppercase text-muted2 no-underline transition-colors hover:text-gold"
         >
           Email

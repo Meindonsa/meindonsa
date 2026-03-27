@@ -2,24 +2,32 @@
 const projects = [
   {
     featured: true,
-    emoji: '🛒',
-    title: 'Plateforme E-commerce Fullstack',
-    tags: ['Vue 3', 'Node.js', 'PostgreSQL', 'Stripe'],
-    desc: 'Application complète avec catalogue, panier, paiement Stripe, espace vendeur et dashboard analytique. Backend Node.js + API REST, frontend Vue 3.',
-    links: [
-      { label: '↗ Demo live', href: '#' },
-      { label: '⌥ Code source', href: 'https://github.com/Meindonsa' },
-    ],
+    emoji: '🔐',
+    title: 'Security Storage',
+    tags: ['TypeScript', 'Crypto-js', 'LZ-String', 'Rollup'],
+    desc: "Librairie js de scryptage et données et d'enregistrement en local storage. Utilisable dans tous vos projets et frameworks JS",
+    links: [{ label: '⌥ GitHub', href: 'https://github.com/Meindonsa/security-storage' }],
   },
   {
     featured: false,
-    emoji: '📊',
-    title: 'Dashboard SaaS Analytics',
-    tags: ['React', 'Laravel', 'MySQL'],
-    desc: 'Tableau de bord temps réel avec graphiques, exports et gestion multi-tenants.',
+    emoji: '💫',
+    title: 'Space Icônes',
+    tags: ['TypeScript', 'svg-sprite'],
+    desc: "Librairie d'icone légère et simple d'utilisation.",
     links: [
-      { label: '↗ Demo', href: '#' },
-      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa' },
+      { label: '↗ Demo', href: 'https://github.com/Meindonsa/space-icon' },
+      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa/space-icon' },
+    ],
+  },
+  {
+    featured: true,
+    emoji: '🌐',
+    title: 'Portfolio CMS Headless',
+    tags: ['Nuxt 3', 'Prisma', 'PostgreSQL'],
+    desc: 'Ce portfolio — SSR, Lighthouse 98+, SEO optimisé, administration via CMS headless maison.',
+    links: [
+      { label: '↗ Live', href: 'https://meindonsa.vercel.app' },
+      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa/meindonsa' },
     ],
   },
   {
@@ -33,26 +41,7 @@ const projects = [
       { label: '↗ Play Store', href: '#' },
       { label: '⌥ GitHub', href: 'https://github.com/Meindonsa' },
     ],
-  },
-  {
-    featured: false,
-    emoji: '🔐',
-    title: 'Auth Service Microservice',
-    tags: ['Node.js', 'JWT', 'Redis'],
-    desc: "Service d'authentification modulaire — JWT, OAuth2 (Google, GitHub), sessions Redis, 2FA.",
-    links: [{ label: '⌥ Open Source', href: 'https://github.com/Meindonsa' }],
-  },
-  {
-    featured: true,
-    emoji: '🌐',
-    title: 'Portfolio CMS Headless',
-    tags: ['Nuxt 3', 'Prisma', 'PostgreSQL'],
-    desc: 'Ce portfolio — SSR, Lighthouse 98+, SEO optimisé, administration via CMS headless maison.',
-    links: [
-      { label: '↗ Live', href: 'https://meindonsa.vercel.app' },
-      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa/meindonsa' },
-    ],
-  },
+  }
 ]
 </script>
 
@@ -90,13 +79,11 @@ const projects = [
             'col-span-12 bg-ink border border-rule rounded-lg overflow-hidden',
             'transition-all duration-350 hover:-translate-y-1.5 hover:border-gold-line',
             'hover:shadow-[0_20px_60px_rgba(0,0,0,.5)] reveal',
-            p.wide ? 'md:col-span-12' : p.featured ? 'md:col-span-7' : 'md:col-span-5',
+            p.wide ? 'md:col-span-12' : p.featured ? 'md:col-span-4' : 'md:col-span-4',
           ]"
           data-hover
         >
-          <!-- Wide layout inner -->
           <div :class="p.wide ? 'grid grid-cols-1 md:grid-cols-2' : ''">
-            <!-- Thumbnail -->
             <div
               class="aspect-video bg-ink2 flex items-center justify-center overflow-hidden text-5xl opacity-15 bg-gradient-to-br from-ink2 to-gold/5 transition-opacity duration-300 hover:opacity-25"
               :class="p.wide ? 'aspect-auto min-h-[200px]' : ''"
@@ -104,7 +91,6 @@ const projects = [
               {{ p.emoji }}
             </div>
 
-            <!-- Body -->
             <div class="p-7">
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
