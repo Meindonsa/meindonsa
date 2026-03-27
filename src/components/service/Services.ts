@@ -11,41 +11,41 @@ export const Services: Service[] = [
     icon: '⚡',
     title: 'Applications Web Fullstack',
     description:
-      "SPA, SSR, APIs REST & GraphQL. De la base de données au frontend, je conçois et code l'ensemble de l'architecture.",
+      "SPA, SSR & APIs REST. De la base de données au frontend, je conçois et code l'ensemble de l'architecture.",
   },
   {
     n: '02',
     icon: '📱',
     title: 'Applications Mobiles',
     description:
-      'Apps cross-platform iOS & Android avec Flutter. UX native, performances optimisées, publication sur les stores.',
+      'Apps cross-platform iOS & Android avec IONIC. UX native, performances optimisées.',
   },
   {
     n: '03',
-    icon: '🔌',
-    title: 'APIs & Microservices',
+    icon: '🖥',
+    title: 'Applications de bureau',
     description:
-      "Conception et développement d'APIs robustes, documentées et sécurisées. Authentification JWT/OAuth, rate limiting, webhooks.",
+      'Applications pour vos bureaux. Plusieurs platefomes, une codebase robuste, un outils. ElectronJs',
   },
   {
     n: '04',
-    icon: '🎨',
-    title: 'Interfaces & Design System',
+    icon: '🔌',
+    title: 'APIs & Microservices',
     description:
-      'Intégration Figma pixel-perfect, bibliothèques de composants, animations soignées. Accessibilité et performance comme standards.',
+      "Conception et développement d'APIs robustes, documentées et sécurisées. Authentification JWT/OAuth, MFA, webhooks.",
   },
   {
     n: '05',
-    icon: '🚀',
-    title: 'DevOps & CI/CD',
+    icon: '🎨',
+    title: 'Interfaces & Design System',
     description:
-      'Containerisation Docker, pipelines GitHub Actions, déploiements automatisés. Infrastructure fiable pour des livraisons sans stress.',
+      'Intégration Figma, bibliothèques de composants, animations soignées. Accessibilité et performance comme standards.',
   },
   {
     n: '06',
     icon: '🔍',
     title: 'Audit & Optimisation',
     description:
-      'Analyse de code, optimisation des performances (Core Web Vitals, N+1, bundle), sécurité et réduction de la dette technique.',
+      'Analyse de code, optimisation des performances, sécurité et réduction de la dette technique.',
   },
 ]

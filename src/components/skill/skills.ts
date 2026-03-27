@@ -19,6 +19,7 @@ export const data: Skill[] = [
       { name: 'TypeScript', level: 'Avancé' },
       { name: 'Tailwind CSS', level: 'Intermédiaire' },
       { name: 'Bootstrap', level: 'Expert' },
+      { name: 'Strapi', level: 'Intermédiaire' },
     ],
   },
   {
@@ -46,6 +47,7 @@ export const data: Skill[] = [
       { name: 'Linux / Bash', level: 'Intermédiaire' },
       { name: 'Electron JS', level: 'Intermédiaire' },
       { name: 'Supabase', level: 'Intermédiaire' },
+      { name: 'Strapi', level: 'Intermédiaire' },
     ],
   },
 ]
@@ -72,4 +74,5 @@ export const marItemsData = [
   'Linux',
   'Electron JS',
   'Supabase',
+  'Strapi',
 ]

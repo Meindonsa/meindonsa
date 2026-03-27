@@ -23,7 +23,6 @@ const services: Ref<Service[]> = ref(Services)
         </p>
       </div>
 
-      <!-- Grid 3×2 séparé par 1px -->
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-lg overflow-hidden"
       >
@@ -33,7 +32,6 @@ const services: Ref<Service[]> = ref(Services)
           class="bg-ink p-10 relative group transition-colors duration-300 hover:bg-ink2 reveal"
           data-hover
         >
-          <!-- top accent line -->
           <div
             class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           ></div>
