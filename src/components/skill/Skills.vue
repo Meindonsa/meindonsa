@@ -73,5 +73,4 @@ const marItems = ref(marItemsData)
   </section>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

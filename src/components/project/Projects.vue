@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { GitHub } from '@/shared/SocialNetwork.ts'
+
 const projects = [
   {
     featured: true,
@@ -41,7 +43,7 @@ const projects = [
       { label: '↗ Play Store', href: '#' },
       { label: '⌥ GitHub', href: 'https://github.com/Meindonsa' },
     ],
-  }
+  },
 ]
 </script>
 
@@ -62,7 +64,7 @@ const projects = [
           </h2>
         </div>
         <a
-          href="https://github.com/Meindonsa"
+          :href="GitHub.href"
           target="_blank"
           class="border border-rule text-muted font-mono text-[.72rem] tracking-widest uppercase px-6 py-2.5 rounded-sm no-underline transition-all duration-200 hover:border-gold-line hover:text-gold"
         >
