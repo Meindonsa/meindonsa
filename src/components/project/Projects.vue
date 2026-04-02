@@ -35,13 +35,13 @@ const projects = [
   {
     wide: true,
     emoji: '📱',
-    title: 'App Mobile de Gestion RH',
-    tags: ['Flutter', 'Node.js', 'Firebase'],
-    desc: 'Application cross-platform (iOS & Android) pour la gestion des congés, présences et fiches de paie. Notifications push, mode hors-ligne, synchronisation automatique.',
+    title: 'PureVue UI Library',
+    tags: ['Vue 3', 'Tailwind css'],
+    desc: "Librairie d'UI pour des projets Vue s'inspirant des succès de Primevue mais également de ses manquements",
     links: [
-      { label: '↗ App Store', href: '#' },
-      { label: '↗ Play Store', href: '#' },
-      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa' },
+      // { label: '↗ App Store', href: '#' },
+      // { label: '↗ Play Store', href: '#' },
+      { label: '⌥ GitHub', href: 'https://github.com/Meindonsa/purevue.git' },
     ],
   },
 ]
